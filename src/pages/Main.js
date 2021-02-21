@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Text, SafeAreaView, View, Button, TextInput, FlatList} from 'react-native';
+import React from 'react';
+import {  SafeAreaView, View, FlatList } from 'react-native';
 
 import PostCard from './PostCard';
 
@@ -41,33 +41,33 @@ const post_data = [
     },
 ]
 
-const Main = (props)=>{
+const Main = (props) => {
 
-    const renderPost = ({item})=>{
-        return(
-            <PostCard 
+    const renderPost = ({ item }) => {
+        return (
+            <PostCard
                 parametre={item}
-                selected={(value)=> {selectedCard(value)}}
-            /> 
+                selected={(value) => { selectedCard(value) }}
+            />
         )
     }
-    function selectedCard(value){
-      console.log(value)
+    function selectedCard(value) {
+        console.log(value)
         props.navigation.navigate('SecondPage', value)
     }
 
-    return(
+    return (
         <SafeAreaView>
             <View>
-                <FlatList 
+                <FlatList
                     data={post_data}
-                    renderItem = {renderPost}
-                    numColumns ={2}
+                    renderItem={renderPost}
+                    numColumns={2}
                 />
-              
+
             </View>
         </SafeAreaView>
     )
 }
 
-export {Main};
+export { Main };

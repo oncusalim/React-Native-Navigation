@@ -2,5 +2,5 @@
 This project aims to practice React-Native Navigation procedures
 
 <div>
-  <img src="images/navigation.png" width="300" height="600" >
+  <img src="image/navigation.gif" width="300" height="600" >
 </div>
